@@ -1,0 +1,117 @@
+@import '_config';
+@media screen and (max-width:700px){
+    .content{
+        font-size: 1.4rem;
+        margin: 2rem auto ;
+    }
+    nav{
+        ul{
+            flex-direction: column;
+            li:not(:last-child){
+margin-bottom: 1rem;
+            }
+        .highlight{
+            display: none;
+        }
+        }
+
+    }
+    footer{
+        ul{
+            flex-direction: column;
+            justify-content: center;
+            li{
+                margin: 1rem;
+                text-align: center;
+            }
+        }
+
+    }
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: $light-color;
+    margin: 0;
+
+}
+.container{
+    padding: 1rem;//1rem-16px
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1000px;
+}
+header{
+    background-image: url("/assets/img/car.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            font-size: 2rem;
+        }
+        ul{
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            li{
+                a{
+                    color: white;
+                    padding: 1rem;
+                    text-decoration: none;
+                }
+                .selected{
+                    font-weight: bold;
+                }
+                .highlight{
+                    @include highlight
+                   
+
+                }
+            }
+        }
+
+    }
+    .content{
+        font-size: 2rem;
+        margin: auto;
+        max-width: 100%;
+        h1{
+            color: $primary-color;
+            margin-bottom: 0;
+        }
+        .highlight{
+@include highlight
+
+        }
+    }
+}
+footer{
+    
+    background-color: #000;
+    color: $light-color;
+    padding: 1rem;
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+    }
+    strong{
+        color: $primary-color;
+    }
+    p{
+        margin: 0;
+    }
+}
+
+

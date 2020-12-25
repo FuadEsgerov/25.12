@@ -1,0 +1,8 @@
+$primary-color:#00C2FF;
+$light-color:#fff;
+ @mixin highlight {
+    background-color: $primary-color;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+ }
